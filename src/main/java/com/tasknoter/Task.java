@@ -1,5 +1,7 @@
 package com.tasknoter;
 
+import lombok.ToString;
+
 import java.time.LocalDateTime;
 
 class Task {
@@ -18,4 +20,15 @@ class Task {
         this.description = null;
     }
 
+    Task(String note,
+         boolean isCompleted,
+         LocalDateTime startedAt,
+         LocalDateTime finishedAt,
+         String description) {
+        this.note = note;
+        this.isCompleted = isCompleted;
+        this.startedAt = startedAt;
+        this.finishedAt = finishedAt;
+        this.description = description;
+    }
 }

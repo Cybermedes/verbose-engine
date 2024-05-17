@@ -1,6 +1,5 @@
 package com.tasknoter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class TaskApp {
@@ -8,7 +7,7 @@ class TaskApp {
     private final List<Task> taskList;
 
     TaskApp() {
-        this.taskList = new ArrayList<>();
+        this.taskList = TaskAppUtil.loadSavedTasks();
     }
 
     public List<Task> getTaskList() {
