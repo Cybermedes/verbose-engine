@@ -1,9 +1,16 @@
 package com.tasknoter;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
 class Task {
 
     private String note;
@@ -17,18 +24,7 @@ class Task {
         this.startedAt = LocalDateTime.now();
         this.isCompleted = false;
         this.finishedAt = null;
-        this.description = null;
+        this.description = "no description";
     }
 
-    Task(String note,
-         boolean isCompleted,
-         LocalDateTime startedAt,
-         LocalDateTime finishedAt,
-         String description) {
-        this.note = note;
-        this.isCompleted = isCompleted;
-        this.startedAt = startedAt;
-        this.finishedAt = finishedAt;
-        this.description = description;
-    }
 }

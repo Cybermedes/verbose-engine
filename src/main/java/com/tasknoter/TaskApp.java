@@ -1,7 +1,10 @@
 package com.tasknoter;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 class TaskApp {
 
     private final List<Task> taskList;
@@ -10,12 +13,9 @@ class TaskApp {
         this.taskList = TaskAppUtil.loadSavedTasks();
     }
 
-    public List<Task> getTaskList() {
-        return taskList;
-    }
-
     void addTask(String info) {
         taskList.add(new Task(info));
+        TaskAppUtil.storeNewTasks(taskList);
     }
 
     void updateTask(int taskNumber) {}
