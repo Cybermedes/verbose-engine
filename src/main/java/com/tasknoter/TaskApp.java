@@ -15,7 +15,7 @@ class TaskApp {
 
     void addTask(String info) {
         taskList.add(new Task(info));
-        TaskAppUtil.storeNewTasks(taskList);
+        TaskAppUtil.saveUpdatedTasks(taskList);
     }
 
     void updateTask(int taskNumber) {}

@@ -3,5 +3,7 @@ package com.tasknoter;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World from Java " + Runtime.version());
+        TaskApp taskApp = new TaskApp();
+        TaskAppUtil.printTable(taskApp);
     }
 }
