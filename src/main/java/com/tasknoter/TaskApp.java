@@ -24,8 +24,8 @@ class TaskApp {
             System.out.println("invalid index value/ index out of range");
             System.exit(0);
         }
-        taskList.get(index).setCompleted(true);
-        taskList.get(index).setFinishedAt(LocalDateTime.now());
+        taskList.get(index - 1).setCompleted(true);
+        taskList.get(index - 1).setFinishedAt(LocalDateTime.now());
         TaskAppUtil.saveUpdatedTasks(taskList);
     }
 
@@ -34,7 +34,7 @@ class TaskApp {
             System.out.println("invalid index value/ index out of range");
             System.exit(0);
         }
-        taskList.remove(index);
+        taskList.remove(index - 1);
         TaskAppUtil.saveUpdatedTasks(taskList);
     }
 }
