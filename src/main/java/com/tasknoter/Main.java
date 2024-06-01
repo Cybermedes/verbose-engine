@@ -12,7 +12,7 @@ public class Main {
                 case "--remove", "-r" -> taskApp.removeTask(Integer.parseInt(args[1]));
                 default -> System.out.println("unknown argument");
             }
-            TaskAppUtil.printTable(taskApp);
+            Table.printTable(taskApp);
         } catch (NumberFormatException e) {
             System.err.format("%s%n", e);
             System.exit(0);
