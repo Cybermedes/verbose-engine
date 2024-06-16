@@ -59,7 +59,11 @@ class Table {
         }
     }
 
-    private static void printBorder(int idxLength, int noteLength, int completedLength, int startedAtLength, int finishedAtLength) {
+    private static void printBorder(int idxLength,
+                                    int noteLength,
+                                    int completedLength,
+                                    int startedAtLength,
+                                    int finishedAtLength) {
         System.out.print("+");
         for (int i = 0; i < idxLength + 2; i++) {
             System.out.print("-");
